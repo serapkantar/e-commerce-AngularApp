@@ -6,14 +6,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 
-
+//Angular Material 
+import {MatIconModule} from '@angular/material/icon';
 
 
 
 @NgModule({
   declarations: [ShopComponent, NavbarComponent],
   imports: [
-    CommonModule,ModelModule,BrowserModule,FormsModule
+    CommonModule,ModelModule,BrowserModule,FormsModule,MatIconModule
   ],
   exports:[ShopComponent]
 })

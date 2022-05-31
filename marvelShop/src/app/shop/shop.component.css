@@ -1,3 +1,16 @@
 .pt-100{
 padding-top:100px;
 }
+
+.mh{
+    min-height:400px;
+}.mh:hover{
+    width:300px;
+}
+
+.btn-color{
+    background-color:rgba(103, 58, 183)!important;
+    color: aliceblue;
+    width:200px;
+    border-radius:200px;
+}

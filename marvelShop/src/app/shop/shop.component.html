@@ -2,6 +2,7 @@
 
 <div class="container pt-100">
   <div class="row">
+    
     <div class="col-md-3">
       <div class="list-group">
         <a
@@ -29,7 +30,7 @@
       <div class="row">
         <ng-container *ngFor="let product of products">
           <div class="col-md-4">
-            <div class="card mb-3">
+            <div class="card mb-3 mh">
               <img
                 [src]="product.imageUrl"
                 class="card-img-top"
@@ -43,7 +44,7 @@
                 </p>
               </div>
               <div class="card-footer text-center">
-                <a href="#" class="btn btn-primary">AddToCard</a>
+                <a href="#" class="btn btn-color">AddToCard</a>
               </div>
             </div>
           </div>
