@@ -11,6 +11,7 @@ import { productRepository } from '../models/services/product.repository';
 })
 export class ShopComponent implements OnInit {
 
+  public selectedCategory: Category | undefined;
 
   constructor(
     private productRepository: productRepository,
@@ -22,7 +23,7 @@ export class ShopComponent implements OnInit {
 
 
   get products(): Product[] {
-    return this.productRepository.getProducts();
+    return this.productRepository.getProducts(this.selectedCategory);
   }
 
   get categories(): Category[] {
@@ -31,7 +32,9 @@ export class ShopComponent implements OnInit {
   }
 
 
-
+  onChange(newCategory?: Category) {
+    this.selectedCategory = newCategory;
+  }
 
 
 
