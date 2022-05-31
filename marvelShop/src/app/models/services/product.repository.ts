@@ -9,19 +9,25 @@ import { RestService } from './rest.service';
 export class productRepository implements OnInit {
     private products:Product[]=[];
 
-  constructor(private restService :RestService) {}
-ngOnInit(){
+  constructor(private restService :RestService) {
     this.restService
     .getProduct()
     .subscribe(products=>
     this.products=products
     )
-}
+  }
 
+ngOnInit(){}
+
+//?
 getProduct(id:number){
     return this.products.find(i=>i.id===id);
 }
 
+getProducts():Product[]{
 
+    return this.products;
+
+}
 
 }

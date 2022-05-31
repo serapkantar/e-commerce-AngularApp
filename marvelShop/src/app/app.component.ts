@@ -7,9 +7,7 @@ import { Component } from '@angular/core';
 
 
   selector: 'root',
-  template: `<div class="bg-primary m-5 p-5" >
-   Shop
-  </div>`,
+  template:"<shop> </shop>",
 
 })
 export class AppComponent {
