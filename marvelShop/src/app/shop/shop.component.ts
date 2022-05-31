@@ -11,25 +11,24 @@ import { productRepository } from '../models/services/product.repository';
 })
 export class ShopComponent implements OnInit {
 
-  constructor( 
-    private productRepository:productRepository,
-    private categoryRepository:CategoryRepository
-    ) { }
+
+  constructor(
+    private productRepository: productRepository,
+    private categoryRepository: CategoryRepository
+  ) { }
 
   ngOnInit(): void {
   }
 
 
-get products() :Product[]{
+  get products(): Product[] {
+    return this.productRepository.getProducts();
+  }
 
-return this.productRepository.getProducts();
+  get categories(): Category[] {
 
-}
-
-get categories():Category[]{
-
-  return this.categoryRepository.getCategories();
-}
+    return this.categoryRepository.getCategories();
+  }
 
 
 

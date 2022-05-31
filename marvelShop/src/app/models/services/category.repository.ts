@@ -3,9 +3,7 @@ import { Category } from '../model/category.model';
 import { RestService } from './rest.service';
 
 
-@Injectable(
-    // {providedIn: 'root'}
-)
+@Injectable()
 export class CategoryRepository implements OnInit {
 
     private categories:Category[]=[];
