@@ -1,7 +1,6 @@
 .pt-100{
 padding-top:100px;
 }
-
 .mh{
     min-height:400px;
 }.mh:hover{
@@ -9,8 +8,23 @@ padding-top:100px;
 }
 
 .btn-color{
-    background-color:rgba(103, 58, 183)!important;
+    background-color:rgba(103, 58, 183);
     color: aliceblue;
     width:200px;
     border-radius:200px;
+}
+.padding-bt{
+    padding-top: 50px;
+    padding-bottom:50px;
+}
+.bs{
+    color:rgb(254, 253, 255);
+    background-color:rgba(103, 58, 183);
+}
+.bt{
+    color:rgb(254, 253, 255);
+}
+.active{
+    background-color: rgb(255, 255, 255);
+    color: blueviolet;
 }

@@ -2,27 +2,24 @@
 
 <div class="container pt-100">
   <div class="row">
-    
     <div class="col-md-3">
       <div class="list-group">
         <a
-        href="#"
-        class="list-group-item list-group-item-action"
-        (click)="onChange()"
-         > 
-        All Categories
-      </a>
-
-        <a 
-           href="#"
+          href="#"
+          class="list-group-item list-group-item-action"
+          (click)="onChange()"
+        >
+          All Categories
+        </a>
+        <a
+          href="#"
           *ngFor="let category of categories"
           class="list-group-item list-group-item-action"
           (click)="onChange(category)"
-          [class.active]="selectedCategory==category"
+          [class.active]="selectedCategory == category"
         >
           {{ category.categoryName }}
-         </a>
-        
+        </a>
       </div>
     </div>
 
@@ -49,6 +46,35 @@
             </div>
           </div>
         </ng-container>
+      </div>
+
+      <div class="row text-center">
+        <div class="example-button-container ppadding-bt">
+          <button
+            [disabled]="selectedPage == 1"
+            (click)="changePage(selectedPage - 1)"
+            mat-mini-fab
+          >
+            <mat-icon class="bt">arrow_left</mat-icon>
+          </button>
+
+          <button
+            *ngFor="let page of pageNumbers"
+            mat-mini-fab class="bs"
+            (click)="changePage(page)"
+            [class.active]="page == selectedPage"
+          >
+           {{ page }}
+          </button>
+
+          <button
+            [disabled]="selectedPage == pageNumbers.length"
+            (click)="changePage(selectedPage + 1)"
+            mat-mini-fab
+          >
+            <mat-icon class="bt">arrow_right</mat-icon>
+          </button>
+        </div>
       </div>
     </div>
   </div>

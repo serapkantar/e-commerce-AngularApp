@@ -8,13 +8,16 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 //Angular Material 
 import {MatIconModule} from '@angular/material/icon';
-
-
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [ShopComponent, NavbarComponent],
   imports: [
-    CommonModule,ModelModule,BrowserModule,FormsModule,MatIconModule
+    CommonModule,ModelModule,BrowserModule,FormsModule,
+    MatIconModule,
+    MatPaginatorModule,
+    MatButtonModule
   ],
   exports:[ShopComponent]
 })
