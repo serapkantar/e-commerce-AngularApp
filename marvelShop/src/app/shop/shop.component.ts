@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { Category } from '../models/model/category.model';
 import { Product } from '../models/model/product.model';
+import { Cart } from '../models/services/cart.model';
 import { CategoryRepository } from '../models/services/category.repository';
 import { productRepository } from '../models/services/product.repository';
+
+declare let alertify: { success: (arg0: string | undefined) => void; };
 
 @Component({
   selector: 'shop',
@@ -13,14 +16,14 @@ import { productRepository } from '../models/services/product.repository';
 export class ShopComponent implements OnInit {
 
   public selectedCategory: Category | undefined;
-
   public productsPerPage: number = 12;
   public selectedPage: number = 1;
 
 
   constructor(
     private productRepository: productRepository,
-    private categoryRepository: CategoryRepository
+    private categoryRepository: CategoryRepository,
+    private cart:Cart,
   ) { }
 
   ngOnInit(): void {
@@ -55,6 +58,13 @@ get pageNumbers():number[]{
     .fill(0).map((a,i)=>i+1);
 }
 
+addToCart(product:Product){
+
+  alertify.success(product.productName);
+  return this.cart.addItem(product) ;
+  
+  
+}
 
 
 

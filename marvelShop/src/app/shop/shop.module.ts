@@ -10,15 +10,19 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatButtonModule} from '@angular/material/button';
+import { CartDetailComponent } from './cart-detail/cart-detail.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [ShopComponent, NavbarComponent],
+  declarations: [ShopComponent, NavbarComponent, CartDetailComponent],
   imports: [
     CommonModule,ModelModule,BrowserModule,FormsModule,
     MatIconModule,
     MatPaginatorModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule
+    
   ],
-  exports:[ShopComponent]
+  exports:[ShopComponent,NavbarComponent,CartDetailComponent]
 })
 export class ShopModule { }

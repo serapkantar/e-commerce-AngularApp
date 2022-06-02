@@ -1,18 +1,17 @@
-<navbar></navbar>
 
 <div class="container pt-100">
   <div class="row">
     <div class="col-md-3">
       <div class="list-group">
         <a
-          href="#"
+         
           class="list-group-item list-group-item-action"
           (click)="onChange()"
         >
           All Categories
         </a>
         <a
-          href="#"
+         
           *ngFor="let category of categories"
           class="list-group-item list-group-item-action"
           (click)="onChange(category)"
@@ -25,7 +24,9 @@
 
     <div class="col-md-9">
       <div class="row">
+
         <ng-container *ngFor="let product of products">
+
           <div class="col-md-4">
             <div class="card mb-3 mh">
               <img
@@ -41,10 +42,11 @@
                 </p>
               </div>
               <div class="card-footer text-center">
-                <a href="#" class="btn btn-color">AddToCard</a>
+                <a class="btn btn-color" (click)="addToCart(product)">AddToCard</a>
               </div>
             </div>
           </div>
+
         </ng-container>
       </div>
 

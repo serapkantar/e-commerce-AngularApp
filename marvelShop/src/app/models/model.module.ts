@@ -4,6 +4,7 @@ import{HttpClientModule} from '@angular/common/http';
 import { CategoryRepository } from './services/category.repository';
 import { productRepository } from './services/product.repository';
 import { RestService } from './services/rest.service';
+import { Cart } from './services/cart.model';
 
 @NgModule({
   declarations: [],
@@ -11,7 +12,7 @@ import { RestService } from './services/rest.service';
     CommonModule,
     HttpClientModule
   ],
-  providers:[CategoryRepository,productRepository,RestService],
+  providers:[CategoryRepository,productRepository,RestService,Cart],
   
 })
 export class ModelModule { }
