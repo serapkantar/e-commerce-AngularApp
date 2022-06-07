@@ -31,7 +31,7 @@
              
              
               <td>
-                <button class="btn btn-danger btn-sm">
+                <button class="btn btn-danger btn-sm" (click)="cart.removeItem(item.product.id)">
              X
                 </button>
               </td>
@@ -69,9 +69,9 @@
           <button routerLink="/shop" class="btn btn-primary btn-sm">
             Alışverişe Devam Et
           </button>
-          <!-- <button routerLink="/cart" class="btn btn-primary btn-sm ml-2">
+          <button routerLink="/checkout" class="btn btn-primary btn-sm ml-2">
               Alışverişi Tamamla
-            </button> -->
+            </button>
         </div>
       </ng-container>
     </div>
