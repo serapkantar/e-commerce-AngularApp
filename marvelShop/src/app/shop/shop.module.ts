@@ -13,9 +13,11 @@ import {MatButtonModule} from '@angular/material/button';
 import { CartDetailComponent } from './cart-detail/cart-detail.component';
 import { RouterModule } from '@angular/router';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { CategoryListComponent } from './category-list/category-list.component';
 
 @NgModule({
-  declarations: [ShopComponent, NavbarComponent, CartDetailComponent, CheckoutComponent],
+  declarations: [ShopComponent, NavbarComponent, CartDetailComponent, CheckoutComponent, ProductListComponent, CategoryListComponent],
   imports: [
     CommonModule,
     ModelModule,

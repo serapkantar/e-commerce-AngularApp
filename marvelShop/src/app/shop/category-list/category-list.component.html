@@ -1,0 +1,14 @@
+
+    <div class="list-group">
+      <a class="list-group-item list-group-item-action" (click)="onChange()">
+        All Categories
+      </a>
+      <a
+        *ngFor="let category of categories"
+        class="list-group-item list-group-item-action"
+        (click)="onChange(category)"
+        [class.active]="selectedCategory == category"
+      >
+        {{ category.categoryName }}
+      </a>
+    </div>
