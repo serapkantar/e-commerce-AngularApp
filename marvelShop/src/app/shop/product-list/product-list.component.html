@@ -1,4 +1,8 @@
 
+
+
+<product-detail [selectedProduct]="selectedProduct"></product-detail>
+
 <div class="row ">
   <div class="col-md-4" *ngFor="let product of products">
       <div class="card mb-3 mh">
@@ -15,7 +19,10 @@
           </p>
         </div>
         <div class="card-footer text-center">
+         
+          <a class="btn btn-color" (click)="displayDetails(product)">Details</a>
           <a class="btn btn-color" (click)="addToCart(product)">AddToCard</a>
+
         </div>
       </div>
     </div>

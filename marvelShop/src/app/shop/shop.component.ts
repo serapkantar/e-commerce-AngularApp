@@ -3,7 +3,6 @@ import { PageEvent } from '@angular/material/paginator';
 import { Category } from '../models/model/category.model';
 import { Product } from '../models/model/product.model';
 import { Cart } from '../models/services/cart.model';
-import { CategoryRepository } from '../models/services/category.repository';
 import { productRepository } from '../models/services/product.repository';
 
 

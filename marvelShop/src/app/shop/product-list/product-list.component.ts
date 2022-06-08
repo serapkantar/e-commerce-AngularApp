@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/models/model/product.model';
 import { Cart } from 'src/app/models/services/cart.model';
 declare let alertify: { success: (arg0: string | undefined) => void; };
@@ -11,9 +12,14 @@ declare let alertify: { success: (arg0: string | undefined) => void; };
 export class ProductListComponent implements OnInit {
 
   @Input()products:Product[]=[];
+
+  selectedProduct:Product | undefined;
+
   constructor(
-    private cart:Cart
-  ) { }
+    private cart:Cart,
+    private router:Router
+
+    ) {}
 
   ngOnInit(): void {
   }
@@ -26,4 +32,10 @@ addToCart(product:Product){
   
   
 }
+
+displayDetails(product:Product){
+ this.selectedProduct=product
+
+}
+
 }
