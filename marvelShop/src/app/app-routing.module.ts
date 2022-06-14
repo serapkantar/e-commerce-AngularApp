@@ -11,6 +11,7 @@ const routes: Routes = [
   { path:'cart', component:CartDetailComponent},
   {path:'checkout',component:CheckoutComponent},
   { path:'detail',component:ProductDetailComponent},
+  {path:'admin',loadChildren:()=>import('./admin/admin.module').then(m=>m.AdminModule)},
   { path:'**', redirectTo:"/shop"}
 
  
